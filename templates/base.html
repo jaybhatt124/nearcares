@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Smart Health Navigator{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  {% block head %}{% endblock %}
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <a href="/" class="logo">
+      <div class="logo-icon">🏥</div>
+      <div class="logo-text">
+        <div class="logo-title">Smart Health <span>Navigator</span></div>
+        <div class="logo-subtitle">AI-Powered Healthcare Guidance</div>
+      </div>
+    </a>
+    <nav class="nav">
+      <a href="/"          class="nav-link {% if request.path == '/' %}active{% endif %}">Home</a>
+      <a href="/hospitals" class="nav-link {% if request.path == '/hospitals' %}active{% endif %}">Hospitals</a>
+      <a href="/about"     class="nav-link {% if request.path == '/about' %}active{% endif %}">About</a>
+      <a href="/tips"      class="nav-link {% if request.path == '/tips' %}active{% endif %}">Health Tips</a>
+      <a href="/contact"   class="nav-link {% if request.path == '/contact' %}active{% endif %}">Contact</a>
+    </nav>
+  </div>
+</header>
+
+{% block content %}{% endblock %}
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <div class="footer-logo-title">Smart Health <span>Navigator</span></div>
+        <p class="footer-desc">Making healthcare navigation accessible to everyone. Find the right specialist near you, instantly.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <a href="/">Home</a>
+        <a href="/hospitals">Find Hospitals</a>
+        <a href="/about">About Us</a>
+        <a href="/tips">Health Tips</a>
+        <a href="/contact">Contact</a>
+      </div>
+      <div class="footer-section">
+        <h4>Disclaimer</h4>
+        <p>This app is for educational and navigational purposes only. Always consult a qualified medical professional for diagnosis and treatment.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Smart Health Navigator. All rights reserved. &nbsp;·&nbsp; <a href="/admin" style="color:inherit; opacity:0.4; font-size:0.75rem; text-decoration:none;">⚙</a></p>
+    </div>
+  </div>
+</footer>
+
+{% block scripts %}{% endblock %}
+</body>
+</html>

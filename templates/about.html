@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+{% block title %}About – Smart Health Navigator{% endblock %}
+{% block content %}
+
+<section class="page-hero">
+  <div class="container">
+    <h1>About Smart Health Navigator</h1>
+    <p>Empowering patients to find the right care at the right time</p>
+  </div>
+</section>
+
+<section class="section content-section">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-image-placeholder">
+        <span>🏥</span>
+        <span style="font-size:1rem; font-weight:700; color:var(--primary);">Smart Health Navigator</span>
+      </div>
+      <div class="about-text">
+        <h2>Our Mission</h2>
+        <p>Smart Health Navigator is an AI-powered platform built to bridge the gap between patients and the right healthcare specialists. We believe finding the right doctor should be simple, fast, and free.</p>
+        <p>Using your live GPS location, we instantly surface hospitals and clinics grouped by specialty — so whether you have heart pain or a skin issue, you see exactly which type of facility to visit.</p>
+        <div class="feature-list">
+          <div class="feature-item">
+            <span class="feature-icon">📍</span>
+            <div class="feature-text">
+              <strong>Live Location Search</strong>
+              <p>High-accuracy GPS positioning with fallback to manual address entry</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">🏥</span>
+            <div class="feature-text">
+              <strong>Specialty Grouping</strong>
+              <p>Hospitals automatically sorted by 15+ medical specialties</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">🗄️</span>
+            <div class="feature-text">
+              <strong>Verified Hospital Database</strong>
+              <p>Admin-curated hospital list with accurate location and specialty data</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">🔍</span>
+            <div class="feature-text">
+              <strong>Disease Search</strong>
+              <p>Search any condition — built-in or custom — to find matching specialists</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--bg);">
+  <div class="container">
+    <h2 class="section-title">Meet the Team</h2>
+    <p class="section-subtitle">Built with ❤️ in Gujarat</p>
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-avatar">👨‍💻</div>
+        <div class="team-name">Team Lead</div>
+        <div class="team-role">Full Stack Developer</div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">👩‍💻</div>
+        <div class="team-name">Backend Dev</div>
+        <div class="team-role">Backend Developer</div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">🎨</div>
+        <div class="team-name">UI/UX Designer</div>
+        <div class="team-role">Frontend & Design</div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">📊</div>
+        <div class="team-name">Data Analyst</div>
+        <div class="team-role">Hospital Data & ML</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

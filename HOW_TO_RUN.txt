@@ -1,0 +1,41 @@
+═══════════════════════════════════════════════════
+  Smart Health Navigator — Setup & Run Guide
+═══════════════════════════════════════════════════
+
+STEP 1 — Install dependencies
+──────────────────────────────
+  pip install -r requirements.txt
+
+STEP 2 — Configure environment variables
+─────────────────────────────────────────
+  Copy .env.example to .env:
+    Windows:  copy .env.example .env
+    Mac/Linux: cp .env.example .env
+
+  Then open .env and set your values:
+    SECRET_KEY    → any long random string
+    DB_PASSWORD   → your MySQL root password
+    ADMIN_PASS    → your desired admin password
+    GEOAPIFY_KEY  → your API key from geoapify.com (free)
+
+  ⚠️  NEVER share or commit your .env file!
+
+STEP 3 — Set up MySQL database
+────────────────────────────────
+  Open MySQL Workbench and run: db_setup.sql
+  This creates the database and sample data.
+
+STEP 4 — Run the app
+──────────────────────
+  python app.py
+
+STEP 5 — Open in browser
+──────────────────────────
+  Website:  http://localhost:5000
+  Admin:    http://localhost:5000/admin
+            Login: use ADMIN_USER / ADMIN_PASS from .env
+
+═══════════════════════════════════════════════════
+  Get free Geoapify API key:
+  https://www.geoapify.com/ → Sign up → API Keys
+═══════════════════════════════════════════════════
